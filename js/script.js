@@ -1,5 +1,5 @@
 const startButton = document.querySelector('.start_button');
-//const modalButton = 
+const modalButton = document.querySelector('.modal_button');
 const shareButton = document.querySelector('.copy_url');
 const loading = document.querySelector('.loading');
 const result = document.querySelector('.result')
@@ -8,7 +8,9 @@ const fieldValue = document.querySelector('#field_value');
 const fieldResult = document.querySelector('.field_result')
 
 const timeValue = document.querySelector('#time_value');
-const timeResult = document.querySelector('.time_result')
+const timeResult = document.querySelector('.time_result');
+const monthResult = document.querySelector('.month_result');
+const yearResult = document.querySelector('.year_result');
 
 function after_click(){
     
@@ -18,7 +20,13 @@ function after_click(){
     fieldResult.innerText = fieldValue.value;
     
     const dayValue = parseInt (10000 / timeValue.value);
+    const monthValue = parseInt (dayValue % 365) % 12;
+    const yearValue = parseInt (dayValue / 365);
+    
     timeResult.innerText = dayValue;
+    yearResult.innerText = yearValue;
+    monthResult.innerText = monthValue;
+    
 }
 
 function click_start_button(){
