@@ -202,3 +202,11 @@ body {
 .result .result_wrap{
     font-size: 20px;
 }
+
+.result span{
+    padding: 0 20px;
+    font-family: 'GmarketSansBold';
+    font-weight: bold;
+    font-size: 70px;
+    
+}
