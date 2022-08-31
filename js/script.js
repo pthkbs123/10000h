@@ -41,7 +41,7 @@ function click_start_button(){
     
     loading.style.display = 'flex';
     result.style.display = 'none';
-    setInterval(after_click, 1500);
+    setTimeout(after_click, 1500);
 }
 
 function copy_url(){
